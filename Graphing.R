@@ -6,7 +6,7 @@ library(ggplot2)
 library(folio)
 
 # Importing the CSV file
-DataBase <- read.csv("DataBase.csv",header=TRUE)
+DataBase <- read.csv("C:/Users/juanf/OneDrive/Documents/_01_ParisSE/DataBase.csv", sep=";", header=TRUE)
 
 # We specify the number of bears
 n_bears <- 121
@@ -24,7 +24,12 @@ MeanRatio1 <- rowMeans(DataBase[,c('M1_ratio_1', 'M2_ratio_1')], na.rm=TRUE)
 firstRatio <- data.frame(id=id, year=Year, ratio_1=MeanRatio1)
 
 # We plot the evolution of ratio 1
-plot(x=firstRatio$year,y=firstRatio$ratio_1,xlab='Manufacturing year',ylab='ratio of eyes to crown by eyes to base of head')
+ggplot(data = firstRatio, aes(x = Year, y = MeanRatio1)) +
+  geom_point() +
+  theme_bw() +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  xlab("Manufacturing year") +
+  ylab("Ratio of eyes to crown by eyes to base of head")
 
 # We compute and add a trendline
 trendline <- lm(MeanRatio1 ~ Year)
@@ -44,8 +49,14 @@ MeanRatio2[MeanRatio2==0] <- NA
 # We fuse these vectors
 secondRatio <- data.frame(id=id, year=Year, ratio_2=MeanRatio2)
 secondRatio <- na.omit(secondRatio)
+
 # We plot the evolution of ratio 2
-plot(x=secondRatio$year,y=secondRatio$ratio_2,xlab='Manufacturing year',ylab='ratio of tip of snoot to back of head by top of head to base')
+ggplot(data = secondRatio, aes(x = Year, y = ratio_2)) +
+  geom_point() +
+  theme_bw() +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  xlab("Manufacturing year") +
+  ylab("Ratio of tip of snoot to back of head by top of head to base")
 
 # We compute and add a trendline
 trendline <- lm(secondRatio$ratio_2 ~ secondRatio$year)
