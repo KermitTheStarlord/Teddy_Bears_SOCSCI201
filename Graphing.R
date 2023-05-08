@@ -6,7 +6,7 @@ library(ggplot2)
 library(folio)
 
 # Importing the CSV file
-read.csv("DataBase.csv",header=TRUE)
+DataBase <- read.csv("DataBase.csv",header=TRUE)
 
 # We specify the number of bears
 n_bears <- 121
