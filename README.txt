@@ -1,6 +1,6 @@
 Measurement replicated from Hinde, Robert A., and L. A. Barden. 1985. ‘The Evolution of the Teddy Bear’. Animal Behaviour 33 (4): 1371–73. https://doi.org/10.1016/S0003-3472(85)80205-0.
 
-Pictures from the « Les arts décoratifs museum » database, available at http://collections.lesartsdecoratifs.fr.
+Pictures from the « Les arts décoratifs collection » database, available at http://collections.lesartsdecoratifs.fr.
 
 Measurement were made using Gimp measurement tools. Calibrating measurement were made from real life teddy bears.
 
@@ -19,6 +19,6 @@ corrected_tip_of_snout_to_back_of_head : tip_of_snout_to_back_of_head divided by
 top_of_head_to_base : top of head to base measure. Not available for all teddy bears due to unadapted pictures.
 ratio_2 : ratio of tip_of_snout_to_back_of_head by top_of_head_to_base.
 
-Comments : The difference in measurement between the two measurements for the first ratio is centered around 0. The difference in measurement between the two measurements for the seconde ratio indicates a very high amount of noises. IRL calibration shows measuring ratio 2 using pictures is quite inaccurate, whereas measuring ratio 1 is satisfactory.
+Comments : The difference in measurement between the two measurements for the first ratio is centered around 0. The difference in measurement between the two measurements for the seconde ratio indicates a very high amount of noise. IRL calibration shows measuring ratio 2 using pictures is quite inaccurate, whereas measuring ratio 1 is satisfactory.
 
 Pictures are available at https://github.com/KermitTheStarlord/Teddy_Bears_SOCSCI201/
