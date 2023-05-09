@@ -31,10 +31,6 @@ ggplot(data = firstRatio, aes(x = Year, y = MeanRatio1)) +
   xlab("Manufacturing year") +
   ylab("Ratio of eyes to crown by eyes to base of head")
 
-# We compute and add a trendline
-trendline <- lm(MeanRatio1 ~ Year)
-lines(firstRatio$year,predict(trendline),col=2,lwd=2)
-
 # 2. Plotting ratio 2
 # Selecting relevant data
 
@@ -57,7 +53,3 @@ ggplot(data = secondRatio, aes(x = Year, y = ratio_2)) +
   geom_smooth(method = "lm", se = FALSE, color = "red") +
   xlab("Manufacturing year") +
   ylab("Ratio of tip of snoot to back of head by top of head to base")
-
-# We compute and add a trendline
-trendline <- lm(secondRatio$ratio_2 ~ secondRatio$year)
-lines(secondRatio$year,predict(trendline),col=2,lwd=2)
