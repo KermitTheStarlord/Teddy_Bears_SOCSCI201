@@ -47,7 +47,7 @@ MeanRatio2 <- rowMeans(DataBase[,c('M1_ratio_2', 'M2_ratio_2')], na.rm=TRUE)
 # We remove the 0 obtained from missing data points
 MeanRatio2[MeanRatio2==0] <- NA
 # We fuse these vectors
-secondRatio <- data.frame(id=id, year=Year, ratio_2=MeanRatio2)
+secondRatio <- data.frame(id=id, Year=Year, ratio_2=MeanRatio2)
 secondRatio <- na.omit(secondRatio)
 
 # We plot the evolution of ratio 2
